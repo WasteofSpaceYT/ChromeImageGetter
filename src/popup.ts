@@ -42,7 +42,6 @@ chrome.runtime.onMessage.addListener((request, sender) => {
   if (request.type === "getImages") {
     const elements = request.elements;
     const ammt = request.ammt;
-    console.log(elements);
     document.getElementById("ammt")!.textContent = `${ammt} images found`;
     document.getElementById("images")!.innerHTML = elements;
     document.getElementById("images")!.addEventListener("click", (e) => {
